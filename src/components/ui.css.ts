@@ -546,6 +546,23 @@ export const backgrounds: Record<Backgrounds, string> = styleVariants({
     color: theme.colors.primary,
     backgroundColor: theme.colors.muted,
   },
+  white: {
+    color: theme.colors.active,
+    backgroundColor: theme.colors.white,
+  }
+})
+
+export type Shadows = "primary" | "muted"
+
+export const shadows: Record<Shadows, string> = styleVariants({
+  primary: {
+    boxShadow: `15px 15px 0px ${theme.colors.primary}`,
+    border: `1px solid ${theme.colors.primary}`,
+  },
+  muted: {
+    boxShadow: `15px 15px 0px ${theme.colors.muted}`,
+    border: `1px solid ${theme.colors.muted}`,
+  }
 })
 
 export const blockquote = style({

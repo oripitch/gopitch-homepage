@@ -56,6 +56,7 @@ export function Box({
   radius,
   center = false,
   order,
+  shadow,
   cx: _cx = [],
   ...props
 }) {
@@ -69,6 +70,7 @@ export function Box({
         radius && styles.radii[radius],
         center && styles.box.center,
         order && styles.order[order],
+        shadow && styles.shadows[shadow],
         ..._cx,
       ]}
       {...props}
