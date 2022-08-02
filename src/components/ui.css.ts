@@ -535,6 +535,40 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
   ],
 })
 
+const pill = style({
+  display: "inline-flex",
+  textDecoration: "none",
+  fontWeight: theme.fontWeights.bold,
+  fontSize: theme.fontSizes[1],
+  lineHeight: theme.lineHeights.solid,
+  paddingTop: theme.space[1],
+  paddingBottom: theme.space[1],
+  paddingLeft: theme.space[2],
+  paddingRight: theme.space[2],
+  borderRadius: theme.radii.circle,
+  cursor: "pointer",
+})
+
+export type Pills = "selected" | "unselected"
+
+export const pills: Record<Pills, string> = styleVariants({
+  selected: [
+    pill,
+    {
+      color: theme.colors.background,
+      backgroundColor: theme.colors.primary,
+    },
+  ],
+  unselected: [
+    pill,
+    {
+      color: theme.colors.primary,
+      backgroundColor: theme.colors.background,
+      border: `1px solid ${theme.colors.primary}`,
+    },
+  ],
+})
+
 export type Backgrounds = "primary" | "muted"
 
 export const backgrounds: Record<Backgrounds, string> = styleVariants({
@@ -549,7 +583,7 @@ export const backgrounds: Record<Backgrounds, string> = styleVariants({
   white: {
     color: theme.colors.active,
     backgroundColor: theme.colors.white,
-  }
+  },
 })
 
 export type Shadows = "primary" | "muted"
@@ -562,7 +596,7 @@ export const shadows: Record<Shadows, string> = styleVariants({
   muted: {
     boxShadow: `15px 15px 0px ${theme.colors.muted}`,
     border: `1px solid ${theme.colors.muted}`,
-  }
+  },
 })
 
 export const blockquote = style({

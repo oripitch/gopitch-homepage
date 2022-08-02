@@ -165,6 +165,14 @@ export function Button({ variant = "primary", ...props }) {
   return <Base as={Link} cx={[styles.buttons[variant]]} {...props} />
 }
 
+export function Pill({ variant = "primary", ...props }) {
+  return (
+    <Base as={"span"} cx={[styles.pills[variant]]} {...props}>
+      {props.heading}
+    </Base>
+  )
+}
+
 export function ButtonList({ links = [], reversed = false, ...props }) {
   const getVariant = (i) => {
     if (reversed) {
