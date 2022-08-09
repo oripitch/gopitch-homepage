@@ -569,7 +569,7 @@ export const pills: Record<Pills, string> = styleVariants({
   ],
 })
 
-export type Backgrounds = "primary" | "muted"
+export type Backgrounds = "primary" | "muted" | "white" | "dark"
 
 export const backgrounds: Record<Backgrounds, string> = styleVariants({
   primary: {
@@ -583,6 +583,10 @@ export const backgrounds: Record<Backgrounds, string> = styleVariants({
   white: {
     color: theme.colors.active,
     backgroundColor: theme.colors.white,
+  },
+  dark: {
+    color: theme.colors.white,
+    backgroundColor: theme.colors.text,
   },
 })
 

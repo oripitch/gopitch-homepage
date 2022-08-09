@@ -15,7 +15,7 @@ import {
 
 export default function Hero(props) {
   return (
-    <Section>
+    <Section background="dark">
       <Container>
         <Flex gap={4} variant="responsive">
           <Box width="half">

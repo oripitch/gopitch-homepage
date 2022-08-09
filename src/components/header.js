@@ -11,6 +11,7 @@ import {
   InteractiveIcon,
   Nudge,
   VisuallyHidden,
+  cx,
 } from "./ui"
 import {
   mobileNavOverlay,
@@ -21,6 +22,7 @@ import {
 } from "./header.css"
 import NavItemGroup from "./nav-item-group"
 import BrandLogo from "./brand-logo"
+import { backgrounds } from "./ui.css"
 
 export default function Header() {
   const data = useStaticQuery(graphql`
@@ -71,8 +73,8 @@ export default function Header() {
   }, [isOpen])
 
   return (
-    <header>
-      <Container className={desktopHeaderNavWrapper}>
+    <header className={cx(backgrounds.dark)}>
+      <Container background="dark" className={desktopHeaderNavWrapper}>
         <Space size={2} />
         <Flex variant="spaceBetween">
           <NavLink to="/">

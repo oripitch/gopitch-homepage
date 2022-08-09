@@ -15,8 +15,16 @@ export function Base({
   return <Component className={cx(..._cx, className)} {...props} />
 }
 
-export function Container({ width = "normal", ...props }) {
-  return <Base cx={[styles.containers[width]]} {...props} />
+export function Container({ width = "normal", background, ...props }) {
+  return (
+    <Base
+      cx={[
+        styles.containers[width],
+        background && styles.backgrounds[background],
+      ]}
+      {...props}
+    />
+  )
 }
 
 export function Flex({
