@@ -11,6 +11,7 @@ import {
   Box,
   Icon,
   LinkList,
+  Space,
 } from "./ui"
 
 function Product(props) {
@@ -39,7 +40,7 @@ export default function ProductList(props) {
             {props.kicker && <Kicker>{props.kicker}</Kicker>}
             {props.heading}
           </Heading>
-          {props.text && <Text>{props.text}</Text>}
+          {props.text ? <Text>{props.text}</Text> : <Space size={2} />}
         </Box>
         <FlexList gap={4} variant="responsive">
           {props.content.map((product) => (

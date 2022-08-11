@@ -180,6 +180,12 @@ export const marginY = styleVariants(theme.space, (margin) => ({
 export const gutter = styleVariants(theme.space, (val: string) => ({
   marginLeft: calc.multiply(val, -1),
   marginRight: calc.multiply(val, -1),
+  "@media": {
+    [media.xSmallOnly]: {
+      marginLeft: 0,
+      marginRight: 0,
+    },
+  },
 }))
 
 export const radii = styleVariants(theme.radii, (borderRadius) => ({

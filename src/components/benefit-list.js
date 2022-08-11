@@ -18,7 +18,7 @@ function Benefit(props) {
         <Icon
           alt={props.image.alt}
           image={props.image.gatsbyImageData}
-          size="small"
+          size="medium"
         />
       )}
       <Space size={2} />
