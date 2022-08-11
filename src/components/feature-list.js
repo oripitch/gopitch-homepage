@@ -1,6 +1,15 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
-import { Container, Box, Kicker, Heading, Text, Pill, FlexList } from "./ui"
+import {
+  Container,
+  Box,
+  Kicker,
+  Heading,
+  Text,
+  Pill,
+  FlexList,
+  Space,
+} from "./ui"
 import Feature from "./feature"
 
 export default function FeatureList(props) {
@@ -8,7 +17,8 @@ export default function FeatureList(props) {
   return (
     <Container width="fullbleed">
       <Box background="white" radius="large" shadow="primary">
-        <Box center paddingY={5}>
+        <Space size={5} />
+        <Box center>
           <Heading>
             {props.kicker && <Kicker>{props.kicker}</Kicker>}
             {props.heading}

@@ -2,12 +2,14 @@ import { style, styleVariants } from "@vanilla-extract/css"
 import { calc } from "@vanilla-extract/css-utils"
 import { theme } from "../theme.css"
 
-const breakpoints = ["40em", "52em", "64em"]
+const breakpoints = ["20em", "40em", "52em", "64em"]
 
 export const media = {
-  small: `screen and (min-width: ${breakpoints[0]})`,
-  medium: `screen and (min-width: ${breakpoints[1]})`,
-  large: `screen and (min-width: ${breakpoints[2]})`,
+  xSmallOnly: `screen and (min-width: ${breakpoints[0]}) and (max-width: ${breakpoints[1]})`,
+  xSmall: `screen and (min-width: ${breakpoints[0]})`,
+  small: `screen and (min-width: ${breakpoints[1]})`,
+  medium: `screen and (min-width: ${breakpoints[2]})`,
+  large: `screen and (min-width: ${breakpoints[3]})`,
 }
 
 export const container = style({
@@ -158,7 +160,14 @@ export const list = style({
   margin: 0,
 })
 
-export const padding = styleVariants(theme.space, (padding) => ({ padding }))
+export const padding = styleVariants(theme.space, (padding) => ({
+  "@media": { [media.small]: { padding } },
+}))
+export const paddingMobile = styleVariants(theme.space, (padding) => ({
+  "@media": {
+    [media.xSmallOnly]: { padding },
+  },
+}))
 export const paddingY = styleVariants(theme.space, (padding) => ({
   paddingTop: padding,
   paddingBottom: padding,
@@ -641,7 +650,6 @@ export const icons: Record<IconSizes, string> = styleVariants(
   },
   (size) => ({
     width: size,
-    height: size,
     marginBottom: theme.space[3],
   })
 )
