@@ -22,6 +22,7 @@ function Product(props) {
           alt={props.image.alt}
           image={props.image.gatsbyImageData}
           size="large"
+          file={props.image.file}
         />
       )}
       <Subhead>{props.heading}</Subhead>
@@ -68,6 +69,8 @@ export const query = graphql`
         alt
         id
         gatsbyImageData
+        svg
+        file
       }
       links {
         id

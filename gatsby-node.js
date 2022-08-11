@@ -114,6 +114,8 @@ exports.createSchemaCustomization = async ({ actions }) => {
       alt: String
       gatsbyImageData: JSON @imagePassthroughArgs
       url: String
+      svg: JSON
+      file: JSON
     }
 
     interface HomepageHero implements Node & HomepageBlock {
@@ -375,6 +377,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       url: String @imageUrl
       file: JSON
       title: String
+      svg: JSON
     }
 
     type ContentfulHomepageHero implements Node & HomepageHero & HomepageBlock
