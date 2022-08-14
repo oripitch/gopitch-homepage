@@ -16,8 +16,8 @@ export default function Feature(props) {
   return (
     <Section padding={4} background="white">
       <Container>
-        <Flex gap={4} variant="responsive">
-          <Box width="half" order={props.flip ? 1 : null}>
+        <Flex gap={5} variant="center">
+          <Box right width="quarter" order={props.flip ? 1 : null}>
             {props.image && (
               <GatsbyImage
                 alt={props.image.alt}

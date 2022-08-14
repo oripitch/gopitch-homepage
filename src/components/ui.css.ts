@@ -206,6 +206,12 @@ export const box = styleVariants({
     alignItems: "center",
     textAlign: "center",
   },
+  right: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "end",
+    textAlign: "right",
+  },
 })
 
 export const section = style({
