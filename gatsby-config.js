@@ -29,13 +29,19 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Gatsby Starter Contentful Homepage",
-        short_name: "Gatsby",
+        name: "Pitch - AI for social media",
+        short_name: "Pitch",
         start_url: "/",
         // These can be imported once ESM support lands
         background_color: "#ffe491",
         theme_color: "#004ca3",
         icon: "src/favicon.png",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-WJTWGZZ",
       },
     },
   ],
