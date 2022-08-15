@@ -13,7 +13,7 @@ import {
 
 function Benefit(props) {
   return (
-    <Box center as="li" width="half" padding={6} paddingMobile={3} paddingY={3}>
+    <Box center as="li" width="half" padding={4} paddingMobile={3} paddingY={3}>
       {props.image && (
         <Icon
           alt={props.image.alt}

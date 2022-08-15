@@ -98,7 +98,7 @@ export default function Footer() {
   const { links, meta, socialLinks, copyright } = data.layout.footer
 
   return (
-    <Box as="footer" paddingY={4}>
+    <Box as="footer" paddingY={6}>
       <Container>
         <Flex variant="start" responsive>
           <NavLink to="/">

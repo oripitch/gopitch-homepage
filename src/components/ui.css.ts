@@ -115,6 +115,7 @@ export const flexVariants: Record<FlexVariants, string> = styleVariants({
   },
   responsive: {
     flexDirection: "column",
+    alignItems: "flex-start",
     "@media": {
       [media.small]: {
         flexDirection: "row",
@@ -503,11 +504,14 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
     {
       color: theme.colors.background,
       backgroundColor: theme.colors.primary,
+      border: `1px solid transparent`,
       ":hover": {
         backgroundColor: theme.colors.active,
+        border: `1px solid ${theme.colors.background}`,
       },
       ":focus": {
         backgroundColor: theme.colors.active,
+        border: `1px solid ${theme.colors.background}`,
       },
     },
   ],
@@ -518,11 +522,11 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
       backgroundColor: theme.colors.background,
       ":hover": {
         color: theme.colors.background,
-        backgroundColor: theme.colors.active,
+        backgroundColor: theme.colors.text,
       },
       ":focus": {
         color: theme.colors.background,
-        backgroundColor: theme.colors.active,
+        backgroundColor: theme.colors.text,
       },
     },
   ],
@@ -531,11 +535,12 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
     {
       color: "inherit",
       backgroundColor: "transparent",
+      border: `1px solid transparent`,
       ":hover": {
-        backgroundColor: theme.colors.muted,
+        border: `1px solid ${theme.colors.background}`,
       },
       ":focus": {
-        backgroundColor: theme.colors.muted,
+        border: `1px solid ${theme.colors.background}`,
       },
     },
   ],
@@ -546,11 +551,11 @@ export const buttons: Record<ButtonVariants, string> = styleVariants({
       backgroundColor: "transparent",
       ":hover": {
         color: theme.colors.primary,
-        backgroundColor: theme.colors.muted,
+        backgroundColor: theme.colors.background,
       },
       ":focus": {
         color: theme.colors.primary,
-        backgroundColor: theme.colors.muted,
+        backgroundColor: theme.colors.background,
       },
     },
   ],
