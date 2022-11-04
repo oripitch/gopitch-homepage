@@ -2,6 +2,10 @@ const { documentToHtmlString } = require("@contentful/rich-text-html-renderer")
 const { getGatsbyImageResolver } = require("gatsby-plugin-image/graphql-utils")
 
 exports.createSchemaCustomization = async ({ actions }) => {
+  actions.createRedirect({
+    fromPath: "/signup",
+    toPath: "https://app.gopitch.ai/login?signup=true",
+  })
   actions.createFieldExtension({
     name: "blocktype",
     extend(options) {
